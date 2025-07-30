@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guddu Singh - Front-End Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background: #6C4DF6;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after,
+    .active-nav::after {
+      width: 100%;
+    }
+
+    .active-nav {
+      color: #6C4DF6;
+    }
+
+    .project-card,
+    .skill-card {
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(22px);
+      border: 1.5px solid rgba(255, 255, 255, 0.13);
+      border-radius: 1.5rem;
+      box-shadow: 0 6px 40px 0 rgba(34, 20, 78, 0.11);
+      transition: transform 0.36s cubic-bezier(.17, .67, .47, 1.31), box-shadow 0.4s;
+    }
+
+    .project-card:hover,
+    .skill-card:hover {
+      transform: scale(1.05);
+      z-index: 1;
+    }
+
+    .glass-bg {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gradient-title {
+      background: linear-gradient(90deg, #6C4DF6 14%, #1DC071 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-[#201460] via-[#302b63] to-[#23203a] text-white">
+  <!-- Navigation -->
+  <nav class="fixed w-full py-6 px-10 z-50 bg-white/10 backdrop-blur-xl shadow-lg border-b border-white/10">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold tracking-tight text-white">Guddu<span class="text-[#6C4DF6]">.</span></a>
+      <div class="hidden md:flex space-x-12">
+        <a href="#skills" class="nav-link text-white transition">Skills</a>
+        <a href="#projects" class="nav-link text-white transition">Projects</a>
+        <a href="#about" class="nav-link text-white transition">About</a>
+        <a href="#contact" class="nav-link text-white transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-[90vh] flex items-center pt-32 pb-20 relative overflow-hidden">
+    <div
+      class="absolute top-0 left-0 w-96 h-96 rounded-full bg-gradient-to-br from-[#6C4DF6]/30 via-[#1DC071]/10 to-transparent filter blur-3xl opacity-60 pointer-events-none animate-pulse">
+    </div>
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+      <div class="flex-1 space-y-7">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-3 gradient-title">Guddu Singh</h1>
+        <h2 class="text-2xl md:text-4xl text-[#6C4DF6] font-bold tracking-tight">Front-End Developer</h2>
+        <p class="text-lg text-white/80 max-w-xl">I create beautiful, responsive websites with modern
+          technologies.<br>Currently at Subharti Institute of Technology & Engineering.</p>
+        <div class="flex flex-wrap gap-5 mt-8">
+          <a href="#projects"
+            class="bg-[#6C4DF6] hover:bg-purple-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all flex items-center gap-2">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+          <a href="https://github.com/guddu-singh18" target="_blank"
+            class="border-2 border-[#6C4DF6] text-[#6C4DF6] hover:bg-[#6C4DF6] hover:text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all flex items-center gap-2">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <div
+          class="rounded-3xl shadow-2xl glass-bg p-4 w-96 max-w-full border border-white/30 transition hover:scale-105">
+          <img src="image.png" alt="Guddu Singh"
+            class="rounded-2xl shadow-md aspect-square object-cover w-full h-80 bg-gradient-to-br from-[#6C4DF6] to-[#1DC071]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-extrabold mb-2 tracking-tight">
+        My <span class="gradient-title">Expertise</span>
+      </h2>
+      <div class="h-1 w-16 bg-gradient-to-r from-[#6C4DF6] to-[#1DC071] rounded-full mb-12"></div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div class="skill-card p-6 flex flex-col items-center">
+          <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
+          <h3 class="font-bold">HTML5</h3>
+          <p class="text-xs text-gray-300 mt-2">Semantic Markup</p>
+        </div>
+        <div class="skill-card p-6 flex flex-col items-center">
+          <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3"></i>
+          <h3 class="font-bold">CSS3</h3>
+          <p class="text-xs text-gray-300 mt-2">Animations, Flex/Grid</p>
+        </div>
+        <div class="skill-card p-6 flex flex-col items-center">
+          <i class="fab fa-js text-4xl text-yellow-400 mb-3"></i>
+          <h3 class="font-bold">JavaScript</h3>
+          <p class="text-xs text-gray-300 mt-2">ES6+, DOM Manipulation</p>
+        </div>
+        <div class="skill-card p-6 flex flex-col items-center">
+          <i class="fab fa-react text-4xl text-cyan-400 mb-3"></i>
+          <h3 class="font-bold">React</h3>
+          <p class="text-xs text-gray-300 mt-2">Components, Hooks</p>
+        </div>
+        <div class="skill-card p-6 flex flex-col items-center">
+          <i class="fas fa-mobile-alt text-4xl text-[#1DC071] mb-3"></i>
+          <h3 class="font-bold">Responsive</h3>
+          <p class="text-xs text-gray-300 mt-2">Mobile-First Design</p>
+        </div>
+        <div class="skill-card p-6 flex flex-col items-center">
+          <i class="fab fa-github text-4xl mb-3"></i>
+          <h3 class="font-bold">GitHub</h3>
+          <p class="text-xs text-gray-300 mt-2">Version Control</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white/5 backdrop-blur-lg">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-extrabold mb-2 tracking-tight">
+        Featured <span class="gradient-title">Projects</span>
+      </h2>
+      <div class="h-1 w-16 bg-gradient-to-r from-[#6C4DF6] to-[#1DC071] rounded-full mb-12"></div>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Project 1 -->
+        <div class="project-card group relative">
+          <div class="p-8">
+            <h3 class="text-xl font-extrabold mb-1">Portfolio Website</h3>
+            <p class="text-gray-200 mb-3 text-sm">Modern portfolio with dark theme and responsive design using Tailwind
+              CSS.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-[#6C4DF6]">HTML</span>
+              <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-[#6C4DF6]">CSS</span>
+              <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-[#6C4DF6]">JavaScript</span>
+              <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-[#6C4DF6]">Tailwind</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <a href="#"
+                class="inline-flex items-center gap-2 text-[#6C4DF6] font-medium group-hover:translate-x-1 transition-all">
+                View Demo <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/guddu-singh18" target="_blank" class="text-gray-400 hover:text-white">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card group relative">
+          <div class="p-8">
+            <h3 class="text-xl font-extrabold mb-1">Calculator App</h3>
+            <p class="text-gray-200 mb-3 text-sm">Interactive calculator with JavaScript featuring basic and advanced
+              operations.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-[#1DC071]">JavaScript</span>
+              <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-[#1DC071]">CSS Grid</span>
+              <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-[#1DC071]">UI Design</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <a href="#"
+                class="inline-flex items-center gap-2 text-[#1DC071] font-medium group-hover:translate-x-1 transition-all">
+                View Demo <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/guddu-singh18" target="_blank" class="text-gray-400 hover:text-white">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-16">
+        <a href="https://github.com/guddu-singh18" target="_blank"
+          class="inline-block border-2 border-[#6C4DF6] text-[#6C4DF6] hover:bg-[#6C4DF6] hover:text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg">
+          View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-16 items-center">
+        <div class="flex-1 flex flex-col items-center justify-center">
+          <div
+            class="w-64 h-64 rounded-full overflow-hidden border-4 border-[#6C4DF6] shadow-2xl bg-gradient-to-br from-[#6C4DF6] to-[#1DC071] flex items-center justify-center mb-4">
+            <img src="WhatsApp Image 2025-07-28 at 19.14.55_cd174ba8.jpg" alt="Guddu Singh"
+              class="w-full h-full object-cover object-top" style="object-position: center top;" />
+          </div>
+          <div class="text-2xl font-bold text-white mb-8">Guddu Singh</div>
+          <h2 class="text-4xl font-extrabold mb-6 tracking-tight">About <span class="gradient-title">Me</span></h2>
+          <p class="text-gray-300 mb-6">
+            Hello! I'm Guddu Singh, a passionate front-end developer with a keen eye for design and user experience. I
+            specialize in building responsive, accessible, and performant web applications using modern technologies.
+          </p>
+          <p class="text-gray-300 mb-6">
+            Currently pursuing my B.Tech in Computer Science at Subharti Institute of Technology and Engineering, I
+            combine theoretical knowledge with practical skills to create digital solutions that make an impact.
+          </p>
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="flex items-center gap-3 bg-white/10 p-4 rounded-lg">
+              <div class="bg-[#6C4DF6] bg-opacity-20 p-3 rounded-full">
+                <i class="fas fa-graduation-cap text-[#6C4DF6]"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-300">Education</p>
+                <p class="font-medium">B.Tech CSE</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-white/10 p-4 rounded-lg">
+              <div class="bg-[#1DC071] bg-opacity-20 p-3 rounded-full">
+                <i class="fas fa-laptop-code text-[#1DC071]"></i>
+              </div>
+              <div>
+                <p class="text-sm text-gray-300">Experience</p>
+                <p class="font-medium">2+ Years</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-blue-500 bg-opacity-20 p-3 rounded-full">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <div>
+                <p class="text-sm text-gray-300">Location</p>
+                <p class="font-medium">Meerut, India</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-pink-500 bg-opacity-20 p-3 rounded-full">
+              <i class="fas fa-language text-pink-500"></i>
+              <div>
+                <p class="text-sm text-gray-300">Languages</p>
+                <p class="font-medium">English, Hindi</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact"
+            class="bg-[#6C4DF6] hover:bg-purple-700 text-white px-8 py-3 rounded-full font-bold inline-block transition-all shadow-lg">
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white/5 backdrop-blur-lg">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-extrabold mb-2 tracking-tight">Get In <span class="gradient-title">Touch</span></h2>
+      <div class="h-1 w-16 bg-gradient-to-r from-[#6C4DF6] to-[#1DC071] rounded-full mb-12"></div>
+      <div class="grid md:grid-cols-2 gap-16 glass-bg rounded-3xl p-10">
+        <div>
+          <!-- You may add a contact form or additional details here -->
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="bg-[#6C4DF6] bg-opacity-20 p-3 rounded-full">
+                <i class="fas fa-envelope text-[#6C4DF6]"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">Email</h3>
+                <a href="mailto:gudduofficial999@gmail.com"
+                  class="text-gray-300 hover:text-[#6C4DF6] transition">gudduofficial999@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-[#1DC071] bg-opacity-20 p-3 rounded-full">
+                <i class="fab fa-github text-[#1DC071]"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">GitHub</h3>
+                <a href="https://github.com/guddu-singh18" target="_blank"
+                  class="text-gray-300 hover:text-[#1DC071] transition">github.com/guddu-singh18</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-blue-500 bg-opacity-20 p-3 rounded-full">
+                <i class="fab fa-linkedin-in text-blue-500"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/guddusingh18/" target="_blank"
+                  class="text-gray-300 hover:text-blue-500 transition">linkedin.com/in/guddusingh18</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-pink-500 bg-opacity-20 p-3 rounded-full">
+                <i class="fab fa-instagram text-pink-500"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">Instagram</h3>
+                <a href="https://www.instagram.com/theguddusingh18/" target="_blank"
+                  class="text-gray-300 hover:text-pink-500 transition">@theguddusingh18</a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10">
+            <h3 class="font-bold mb-4">Follow Me</h3>
+            <div class="flex gap-4">
+              <a href="https://www.instagram.com/theguddusingh18/" target="_blank"
+                class="bg-gray-700 hover:bg-pink-500 hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://github.com/guddu-singh18" target="_blank"
+                class="bg-gray-700 hover:bg-gray-600 hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/guddusingh18/" target="_blank"
+                class="bg-gray-700 hover:bg-blue-600 hover:text-white w-12 h-12 rounded-full flex items-center justify-center transition-all">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-10 pb-5 border-t border-white/10 glass-bg mt-12">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-xl font-bold text-white mb-2 md:mb-0">Guddu<span class="text-[#6C4DF6]">.</span></div>
+      <div class="flex flex-wrap gap-6 mb-2 md:mb-0">
+        <a href="#skills" class="text-gray-400 hover:text-[#6C4DF6] transition">Skills</a>
+        <a href="#projects" class="text-gray-400 hover:text-[#6C4DF6] transition">Projects</a>
+        <a href="#about" class="text-gray-400 hover:text-[#6C4DF6] transition">About</a>
+        <a href="#contact" class="text-gray-400 hover:text-[#6C4DF6] transition">Contact</a>
+      </div>
+      <div class="text-white/70 text-sm">© 2025 Guddu Singh</div>
+    </div>
+  </footer>
+
+  <!-- UX and Nav Script -->
+  <script>
+    // Active nav highlighting
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section');
+      const navMap = {};
+      navLinks.forEach(link => navMap[link.getAttribute('href').substring(1)] = link);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active-nav'));
+            const id = entry.target.getAttribute('id');
+            if (navMap[id]) navMap[id].classList.add('active-nav');
+          }
+        });
+      }, { threshold: 0.5 });
+      sections.forEach(section => observer.observe(section));
+    });
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    // Back to Top Button
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopBtn.className = 'fixed bottom-8 right-8 z-50 bg-[#6C4DF6] text-white p-4 rounded-full shadow-lg hover:bg-purple-700 transition-all opacity-0 pointer-events-none';
+    backToTopBtn.setAttribute('aria-label', 'Back to Top');
+    document.body.appendChild(backToTopBtn);
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100');
+        backToTopBtn.style.pointerEvents = 'auto';
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.remove('opacity-100');
+        backToTopBtn.style.pointerEvents = 'none';
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
